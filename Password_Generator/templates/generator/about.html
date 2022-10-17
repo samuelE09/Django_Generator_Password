@@ -1,0 +1,20 @@
+{% extends "generator/layout.html" %}
+
+{% block content %}
+<!-- col-md-4 offset-md-4 
+<h3 class="text-center">About</h3>
+        <hr>
+        <p>Este es un Aplicación Web donde podras obtener contraseñas de acuerdo a las opciones mostradas en el formulario.</p>
+        <span>Cabe resaltar que el uso de las constraseñas generadas por este aplicativo es bajo tu responsabilidad</span>
+-->
+<div class="container py-4">
+        <div class="p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid py-5">
+                        <h1 class="display-5 fw-bold">About</h1>
+                        <p class="col-md-8 fs-4">Este es un Aplicación Web donde podras obtener contraseñas de acuerdo a las opciones mostradas en el formulario.
+                        <span class="fst-italic text-muted">Cabe resaltar que el uso de las constraseñas generadas por este aplicativo es bajo tu responsabilidad</span></p>
+                        <a class="btn btn-lg bg-dark text-light" href="{% url 'home' %}">Generar Constraseña</a>
+                </div>
+        </div>
+</div>
+{% endblock %}

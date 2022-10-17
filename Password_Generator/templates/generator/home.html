@@ -1,0 +1,57 @@
+{% extends "generator/layout.html" %}
+
+{% block content %}
+
+<div class="col-md-4 offset-md-4">
+    <div class="card">
+        <div class="card-header text-center fw-bold bg-dark text-light">
+          Password Generator
+        </div>
+
+        <div class="card-body">
+            <form action="{% url 'password' %}" class="justify" name="formulario">
+                <!-- Selecciona la cantidad de caracteres -->
+                <div class="row mb-3">
+                    <select class="form-select" aria-label="Default select example" name="length" id="length" required>
+                        <option selected>Select the length of your passowrd</option>
+                        <option value="6"> 6 Characters </option>
+                        <option value="7"> 7 Characters </option>
+                        <option value="8"> 8 Characters </option>
+                        <option value="9"> 9 Characters </option>
+                        <option value="10"> 10 Characters </option>
+                        <option value="11"> 11 Characters</option>
+                        <option value="12"> 12 Characters</option>
+                        <option value="13"> 13 Characters</option>
+                        <option value="14"> 14 Characters</option>
+                    </select>
+                </div>
+                <!-- Seleccioana caracteres en mayusculas-->
+                <div class="row mb-3">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked name="uppercase">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Uppercase Character </label>
+                    </div>
+                </div>
+                <!-- Seleccioana caracteres especiales-->
+                <div class="row mb-3">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked name="special">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Special Character</label>
+                    </div>
+                </div>
+                <!-- Seleccioana caracteres numericos-->
+                <div class="row mb-3">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked name="numbers">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Numbers Character</label>
+                    </div>
+                </div>
+
+                <div class="row mb-3 text-center">
+                    <button type="submit" class="btn bg-dark text-light" name="generar">Generate Password</button>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
